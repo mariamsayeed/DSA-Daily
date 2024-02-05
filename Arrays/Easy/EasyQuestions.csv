@@ -1,0 +1,21 @@
+import csv
+
+# Define the header
+header = ['Name', 'Age', 'Occupation']
+
+# Define the data
+data = [
+    ['John Doe', 30, 'Software Developer'],
+    ['Jane Doe', 25, 'Data Scientist'],
+    ['Mike Smith', 35, 'Product Manager']
+]
+
+# Open the CSV file in write mode
+with open('EasyQuestions.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+
+    # Write the header
+    writer.writerow(header)
+
+    # Write the data
+    writer.writerows(data)
